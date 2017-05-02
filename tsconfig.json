@@ -1,0 +1,8 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "outDir": "./outjs",
+        "module": "es2015",
+        "moduleResolution": "node"
+    }
+}

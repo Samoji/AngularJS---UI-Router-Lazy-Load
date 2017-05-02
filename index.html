@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lazy Load UI Router</title>
+    <style>
+        .active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-cloak>
+    <a ui-sref="feature1" ui-sref-active="active">Feature 1</a>
+
+    <div ui-view></div>
+</body>
+
+</html>
