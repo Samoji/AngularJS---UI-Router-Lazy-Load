@@ -2,7 +2,7 @@ import "angular";
 import "angular-ui-router";
 
 import * as angular from "angular";
-import uiRouterModule from "angular-ui-router";
+import uiRouterModule from "@uirouter/angularjs/lib";
 
 import feature1Module from "./feature1";
 

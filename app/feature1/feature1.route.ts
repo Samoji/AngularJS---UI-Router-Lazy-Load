@@ -1,4 +1,4 @@
-import { StateDeclaration, StateProvider } from "angular-ui-router/lib";
+import { StateProvider } from "@uirouter/angularjs/lib";
 
 function configRoute($stateProvider: StateProvider) {
     $stateProvider.state({
