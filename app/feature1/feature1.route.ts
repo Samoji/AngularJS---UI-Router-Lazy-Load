@@ -1,9 +1,10 @@
-import { StateProvider } from "@uirouter/angularjs/lib";
-import { LazyCompilerService } from "../core/lazy-compiler.service";
 import { IComponentOptions } from "@types/angular";
+import { StateProvider } from "@uirouter/angularjs/lib";
+
+import { LazyCompilerService } from "../core/lazy-compiler.service";
 import { registerComponentFromTransition } from "../core/lazy-route-helper";
 
-function configRoute($stateProvider: StateProvider) {
+function configLazyRoute($stateProvider: StateProvider) {
     $stateProvider.state({
         lazyLoad: (transition, state) => {
             return System.import("./feature1.component").then((exported: { feature1ComponentOptions: IComponentOptions }) => {
@@ -16,6 +17,6 @@ function configRoute($stateProvider: StateProvider) {
         component: "featureOne"
     });
 }
-configRoute.$inject = ["$stateProvider"];
+configLazyRoute.$inject = ["$stateProvider"];
 
-export { configRoute };
+export { configLazyRoute };
