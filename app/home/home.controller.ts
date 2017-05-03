@@ -1,3 +1,8 @@
 export class HomeComponentController {
-    welcomeText = "Welcome! This is the home";
+    private catImageSource: string;
+    private welcomeText = "Welcome page!";
+
+    constructor(){
+        this.catImageSource = require("../assets/heavy_image_cat.jpg");
+    }
 }

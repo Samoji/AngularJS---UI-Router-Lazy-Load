@@ -25,10 +25,24 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: "html-loader"
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 25000,
+                },
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" },
+                    { loader: "less-loader" }
+                ]
             }
         ]
     },
-
     plugins: [
         new HtmlWebpackPlugin({
             template: "index.html"

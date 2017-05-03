@@ -3,6 +3,8 @@ import { configLazyRoute } from "./home.route";
 
 import coreModule from "../core";
 
+import "./home.less";
+
 export default angular
     .module("app.home", [
         coreModule
